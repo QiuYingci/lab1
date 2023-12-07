@@ -1,0 +1,28 @@
+//STUDENTS
+//search by email
+GET http://127.0.0.1:8081/api/students/search_email?email=123
+//search by username
+GET http://127.0.0.1:8081/api/students/search?username=newuser
+//login
+POST http://127.0.0.1:8081/api/users/login?id=123123&password=password123
+//update info for a student when first time login the system.
+PUT http://127.0.0.1:8081/api/students/update/188045?passportNumber=188045&dateOfBirth=2000-01-01&email=123@mail.com&password=123
+PUT /api/students/update/id?passportNumber=xxx&dateOfBirth=xxxx-xx-xx&email=xxx@xxx&password=xxx
+
+
+//STAFF
+//update subject for a staff (multiple subject, String [])
+PUT http://127.0.0.1:8081/api/staff/update/354586?Subject=123&Subject=321
+
+
+//ADMIN
+//insert a student
+POST http://127.0.0.1:8081/api/students/register?name=xixi
+//insert a staff
+POST http://127.0.0.1:8081/api/staff/register?name=xixi&passportNumber=188045&email=123@mail.com&status=tutor&password=123
+//insert a new subject
+POST http://127.0.0.1:8081/api/subject/add?name=123
+//update subject for a Student
+PUT http://127.0.0.1:8081/api/students/updateSub/354586?Subject=123&Subject=321
+//insert a new admin
+http://127.0.0.1:8081/api/admin/register?name=xixi&email=123@mail.com&role=admin&password=123
